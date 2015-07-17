@@ -1,0 +1,54 @@
+section#home {
+  background: green;
+  min-height: 110%;
+  min-width: 100%;
+}
+
+section#about {
+  background: white;
+  min-height: 110%;
+  min-width: 100%;
+}
+
+section#contact {
+  background: red;
+  min-height: 110%;
+  min-width: 100%;
+}
+
+
+section#web-design {
+  background: pink;
+  min-height: 110%;
+  min-width: 100%;	
+}
+
+section#apps {
+  background: black;
+  min-height: 110%;
+  min-width: 100%;
+}
+
+.section {
+  position: relative;
+  top: -45px;
+}
+
+.top-bar {
+  margin-top: 0px;
+}
+
+.top-bar-section {
+  margin-bottom: 0px;
+}
+
+/*@media (max-width: 768px) {
+	section#about {
+		height: 160%;
+	}
+
+	section#web-design {
+		height: 130%;
+	}
+}
+*/
