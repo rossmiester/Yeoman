@@ -34,3 +34,5 @@ $(".nav-links").click(function() {
         scrollTop: $(page_location).offset().top
     }, 2000);
 });
+
+
