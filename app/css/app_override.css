@@ -1,38 +1,219 @@
-section#home {
-  background: green;
+/** {
+  border: 1px solid black;
+}*/
+
+body {
+    margin-top: 2.8125rem;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#menu {
+  display: none;
+  background-color: #628160;
+}
+
+.camo {
+  border: 0;
+  background-image: url('../images/camo.png');
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+/*.modal {
   height: 100vh;
+  width: 100vw;
+  background-color: red;
+  opacity: 
+}*/
+
+.section {
+  position: relative;
+  top: 0px;
+}
+
+.tab-bar {
+  background-color: #628160;
+}
+
+.tab-bar a {
+  color: black;
+}
+
+.tab-bar-section a {
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+  color: white;
+}
+
+/* ///////////// HOME SECTION ///////////// */
+
+section#home {
+ /* background: url('../images/western-wall.jpg') no-repeat;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+ /* background: url('../images/army-bg.png') bottom center no-repeat;*/
+  background: url('../images/pattern.png') repeat;
+  /*background-size: 100% 200px;*/
+  background-size:;
+  background-color: ;
+  /*background-repeat: no-repeat;*/
+  /*background-size: contain;*/
+}
+
+
+.intro-text {
+  padding: 20px;
+}
+
+.intro-text h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 60px;
+  text-decoration: underline;
+}
+
+.army-code-man {
+  height: 300px;
+  width: 200px;
+/*  float: right;*/
+  margin-right: 0px;
+  margin-top: 5px;
+}
+
+#home .button {
+  background-color:;
+  display: block;
+  margin: 0 auto;
+  width: 180px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#home .row:nth-child(1) {
+  background-color:;
+  /*padding-top: 0px;*/
+  /*height: 100vh;*/
+  height: 300px;
+  text-align:;
+}
+
+.th {
+  height: 300px;
+  width: 300px;
+}
+
+#home .row:nth-child(1) .columns:nth-child(1) {
+  background-color:;
+  height:;
+  text-align: center;
+  padding: 10px;
+}
+
+#home .row:nth-child(1) .columns:nth-child(2) {
+  background-color: ;
+  height:;
+  padding-top: 50px;
+  text-align: center;
+}
+
+#home h1 {
+  text-align: center;
+}
+
+#home .row:nth-child(2) {
+  background: url('../images/water-pattern.png');
+  height: 500px;
   width: 100%;
 }
+
+/* ///////////// ABOUT SECTION ///////////// */
 
 section#about {
   background: white;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
+
+/* ///////////// CONTACT SECTION ///////////// */
 
 section#contact {
   background: red;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
+
+/* ///////////// WEB-DESIGN SECTION ///////////// */
 
 
 section#web-design {
-  background: pink;
-  height: 100vh;
-  width: 100%;	
+  background: ;
+  height: auto;
+  width: 100vw;	
+  background-image: url('../images/swatch.jpg');
+  background-size: 3px;
 }
+
+#web-design .row:nth-child(1) h1 {
+  margin-top: 30px;
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+}
+
+.badges p {
+  margin-top: 65px;
+  margin-right: 20px;
+  font-size: 35px;
+  text-align: center;
+
+}
+
+.badges .columns {
+  background-image: url('../images/badge.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-size: 210px 240px;
+  height: 240px;
+  width: ;
+  background-color:;
+}
+
+#web-design .row:nth-child(1) .columns:nth-child(1) {
+  background-image: none;
+}
+
+#web-design .columns:nth-child(1) {
+  width: ;
+  height: ;
+}
+
+#web-design .row {
+  height:;
+  background-color:;
+}
+
+/* ///////////// APPS SECTION ///////////// */
 
 section#apps {
   background: black;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
 
-.section {
-  position: relative;
-  top: -45px;
-}
+
+/* ///////////// TOP BAR ///////////// */
 
 .top-bar {
   margin-top: 0px;
@@ -42,21 +223,69 @@ section#apps {
   margin-bottom: 0px;
 }
 
-@media screen and (max-width: 768px) {
+/* ///////////// MEDIA QUERY ///////////// */
+
+@media screen and (min-width: 641px) {
 	section#about {
 		height: 100vh;
 		width: 100vw;
 	}
 
 	section#web-design {
-		height: 100vh;
+		height: auto;
 		width: 100vw;
-		background: purple;
+		background:;
 	}
+
+  #web-design .row:nth-child(1) h1 {
+    font-size: 60px;
+  }
 
 	section#contact {
 		height: 100vh;
 		width: 100vw;
 	}
+
+  #home .row:nth-child(1) {
+    padding-top: 100px;
+  }
 }
 
+@media screen and (min-width: 960px) {
+    .army-code-man {
+      height: 338px;
+      width: 231px;
+    }
+  }
+
+/* ///////////// RIGHT-OFF-CANVAS-MENU ///////////// */
+
+
+.fixed, .right-off-canvas-menu {
+    z-index: 1003;
+}
+.move-left .right-off-canvas-menu {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    right: 0;
+}
+.right-off-canvas-menu {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    left: 100%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    margin-top: 45px;
+}
+.move-left>.inner-wrap {
+    -webkit-transform: none;
+    transform: none;
+}
+.move-left a.exit-off-canvas {
+    -webkit-transition: none;
+    transition: none;
+}
+
+.off-canvas-wrap.move-right, .off-canvas-wrap.move-left {
+    min-height: 0;
+}

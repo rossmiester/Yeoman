@@ -25,9 +25,19 @@ var app = (function(document, $) {
 
 ////////////    JQUERY     ///////////////////////////////////
 
+// toggle menu open/close
+$(".right-small a").click(function() {
+    $("#menu").toggle();
+});
+
+// hide menu onclick
+$(".right-off-canvas-menu").click(function() {
+    $("#menu").hide();
+});
+
 
 //creates a smooth scroll animation when the top bar nav anchor is clicked - scrolls down to link section on page
-$(".nav-links").click(function() {
+$(".right-off-canvas-menu li a").click(function() {
 	// stores the href attribute that is clicked in variable called page
 	var page_location = $(this).attr('href'); 
     $('html, body').animate({
@@ -35,4 +45,18 @@ $(".nav-links").click(function() {
     }, 2000);
 });
 
+//creates a smooth scroll animation when the top bar nav anchor is clicked - scrolls down to link section on page
+//this function is same as function above but for mikeTheDev link at top of page
+$(".title a").click(function() {
+	// stores the href attribute that is clicked in variable called page
+	var page_location = $(this).attr('href'); 
+    $('html, body').animate({
+        scrollTop: $(page_location).offset().top
+    }, 2000);
+});
+
+$(document).ready(function () {
+    $(document).foundation();
+    $(".inner-wrap, .right-off-canvas-menu, .main-section").height($(window).height() - $(".fixed").height());
+});
 
