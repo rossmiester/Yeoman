@@ -55,8 +55,45 @@ $(".title a").click(function() {
     }, 2000);
 });
 
+//home navigation buttons - creates smooth scroll animation to selected pages
+$("#home .row .columns:nth-child(2) a").click(function() {
+	// stores the href attribute that is clicked in variable called page
+	var page_location = $(this).attr('href'); 
+    $('html, body').animate({
+        scrollTop: $(page_location).offset().top
+    }, 2000);
+});
+
 $(document).ready(function () {
     $(document).foundation();
     $(".inner-wrap, .right-off-canvas-menu, .main-section").height($(window).height() - $(".fixed").height());
 });
+
+////////////////////// ANGULAR //////////////////////////
+
+// contact form functions
+(function(angular) {
+  var app = angular.module("contact", []);
+
+  app.controller("contactForm", ['$scope', '$http', function($scope, $http) {
+    $scope.success = false;
+    $scope.error = false;
+
+    $scope.sendMessage = function( input ) {
+      $http({
+          method: 'POST',
+          url: '../php/processForm.php',
+          data: input,
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      })
+      .success( function(data) {
+        if ( data.success ) {
+          $scope.success = true;
+        } else {
+          $scope.error = true;
+        }
+      } );
+    }
+  }]);
+})(angular);
 
